@@ -1,22 +1,22 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Daily Checkoff</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="styles.css">
-    </head>
-    <body>
-        <h1>To-Do List</h1>
-        <div class="task-group">
-            <div class="task-header">
-                <input type="text" placeholder="Enter a new task..." class="task"/>
-                <button class="add-task">Add</button>
-            </div>
-            <div class="task-list"></div>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Checkoff</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="list-container">
+        <!-- Initial central to-do list -->
+        <div class="notebook">
+            <input type="text" class="list-title" placeholder="Name Your List"/>
+            <ul class="tasks"></ul>
+            <input type="text" class="task-input" placeholder="Add a new task..." />
+            <button class="add-task">Add Task</button>
         </div>
-        <script src="scripts.js" async defer></script>
-    </body>
+    </div>
+    <button id="add-list">Add New List</button>
+    <script src="scripts.js"></script>
+</body>
 </html>

@@ -1,103 +1,95 @@
-/* General Styles */
+/* Overall page styling */
 body {
-    background-color: darkgrey;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    margin: 0;
-    padding: 0;
+    background-color: #3d3c3c;
+    font-family: 'Indie Flower', cursive; /* Handwriting-style font */
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-}
-
-h1 {
-    color: white;
-    text-align: center;
-    font-size: 2.5em;
-    margin-bottom: 1em;
-}
-
-/* Task Container */
-.task-group {
-    background-color: #f0f8ff; /* Slightly softer than aliceblue */
-    padding: 2rem;
-    border-radius: 10px;
-    width: 60vw;
-    max-width: 600px;
-    display: flex;
     flex-direction: column;
-    gap: 1rem;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
 }
 
-/* Task Input & Button */
-.task-header {
+/* Container for all the lists */
+#list-container {
     display: flex;
-    gap: 0.5rem;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+/* Styling for each notebook-like to-do list */
+.notebook {
+    background: white url('https://www.transparenttextures.com/patterns/lined-paper-2.png'); /* Lined paper background */
+    border: 2px solid #e0e0e0;
+    padding: 20px;
+    width: 300px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2); /* Depth with shadow */
+    border-radius: 10px;
+    position: relative;
+    margin-top: 20px;
+}
+
+/* Styling for list titles */
+.list-title {
+    font-size: 1.5em;
+    margin-bottom: 15px;
+    border: none;
+    width: 100%;
+    background: transparent;
+    border-bottom: 2px dashed #ccc;
+    padding-bottom: 5px;
+    color: #333;
+}
+
+/* Tasks list inside the notebook */
+.tasks {
+    list-style-type: none;
+    padding: 0;
+}
+
+/* Individual task styling */
+.task-item {
+    font-size: 1.2em;
+    margin: 10px 0;
+    padding: 10px;
+    border-bottom: 1px dashed #ddd;
+    display: flex;
     justify-content: space-between;
 }
 
-.task-header .task {
-    flex: 1;
-    padding: 0.75rem;
+/* Task input and button styling */
+.task-input {
+    margin-top: 10px;
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #ddd;
     border-radius: 5px;
-    border: 1px solid #ccc;
-    font-size: 1rem;
+    box-sizing: border-box;
+    font-size: 1.1em;
 }
 
-.task-header .add-task {
-    padding: 0.75rem 1.5rem;
-    background-color: #4CAF50;
-    color: white;
+.add-task, #add-list {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #f4d1a1; /* Light pencil-like color */
     border: none;
     border-radius: 5px;
-    font-size: 1rem;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    font-size: 1.1em;
+    color: #333;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.2s ease;
 }
 
-.task-header .add-task:hover {
-    background-color: #45a049;
+/* Hover effect for the buttons */
+.add-task:hover, #add-list:hover {
+    background-color: #f2b486; /* Darker pencil color on hover */
 }
 
-/* Task List */
-.task-list {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-    max-height: 400px; /* Adjust for scroll */
-    overflow-y: auto;
-}
-
-.task-list::-webkit-scrollbar {
-    width: 6px;
-}
-
-.task-list::-webkit-scrollbar-thumb {
-    background-color: #ccc;
-    border-radius: 5px;
-}
-
-
-/* Individual Task Styles */
-.task-item {
-    padding: 0.75rem;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    background-color: white;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    transition: background-color 0.3s ease;
-}
-
-.task-item:hover {
-    background-color: #f9f9f9;
-    cursor: pointer;
-    text-decoration: line-through;
-}
-
-.completed{
-    text-decoration: line-through;
-    color: grey;
+/* Extra button styling to resemble a pencil */
+.add-task:active, #add-list:active {
+    background-color: #e39661;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
