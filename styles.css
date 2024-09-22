@@ -1,0 +1,103 @@
+/* General Styles */
+body {
+    background-color: darkgrey;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+h1 {
+    color: white;
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 1em;
+}
+
+/* Task Container */
+.task-group {
+    background-color: #f0f8ff; /* Slightly softer than aliceblue */
+    padding: 2rem;
+    border-radius: 10px;
+    width: 60vw;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Task Input & Button */
+.task-header {
+    display: flex;
+    gap: 0.5rem;
+    justify-content: space-between;
+}
+
+.task-header .task {
+    flex: 1;
+    padding: 0.75rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+}
+
+.task-header .add-task {
+    padding: 0.75rem 1.5rem;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.task-header .add-task:hover {
+    background-color: #45a049;
+}
+
+/* Task List */
+.task-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    max-height: 400px; /* Adjust for scroll */
+    overflow-y: auto;
+}
+
+.task-list::-webkit-scrollbar {
+    width: 6px;
+}
+
+.task-list::-webkit-scrollbar-thumb {
+    background-color: #ccc;
+    border-radius: 5px;
+}
+
+
+/* Individual Task Styles */
+.task-item {
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.3s ease;
+}
+
+.task-item:hover {
+    background-color: #f9f9f9;
+    cursor: pointer;
+    text-decoration: line-through;
+}
+
+.completed{
+    text-decoration: line-through;
+    color: grey;
+}
